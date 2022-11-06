@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+{% block section %}
+<div class="container">
+  <div class="d-sm-auto">
+    <h1>Welcome to <span class="text-warning">{% block owner%}{% endblock%} Blog</span> </h1>
+    <h3>Read interesting articles about <span class="text-warning">wildlife</span>, 
+      <span class="text-warning"> climate change</span> and <span class="text-warning">community building</span></h3>
+  </div>
+</div>
+{% endblock %}
+{% block content %}
+<h1 align="center"></h1>
+<h2 align="center"> Interesting Posts</h2>
+{% for post in posts %}
+  <div class="container">
+    <div class="d-md-auto justify-content-between" id="posts">
+      <div class="card border-dark">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <a href="/post/{{post.user.username}}">{{post.user.username}}</a>
+          {% if current_user.username == post.user.username %}
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-dark dropdown-toggle" data-bs-toggle="dropdown"></button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/edit/{{post.id}}">Edit</a></li>
+              <li><a class="dropdown-item" href="/delete/{{post.id}}">Delete</a></li>
+            </ul>
+          </div>
+          {% endif %}
+        </div>
+        <div class="card-body">
+          <div class="card-text">
+            {{post.content}}
+          </div>
+          <div class="card-footer text-muted">
+            {{post.date_created}}
+          </div>
+        </div>
+    </div>
+  </div>
+  <br>
+{% endfor %}
+{% endblock%}

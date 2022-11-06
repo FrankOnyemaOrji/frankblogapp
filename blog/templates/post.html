@@ -1,0 +1,39 @@
+{% extends "post_div.html" %}
+{% block owner%}{{username}}'s{% endblock%}
+  
+  {% block content %}
+  <h1 align="center">{{username}}'s Post</h1>
+  {% for post in posts %}
+    <div class="container">
+      <div class="d-md-auto justify-content-between" id="posts">
+        <div class="card border-dark">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <a href="/post/{{post.user.username}}">{{post.user.username}}</a>
+            {% if current_user.username == post.user.username %}
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-dark dropdown-toggle" data-bs-toggle="dropdown"></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/edit/{{post.id}}">Edit</a></li>
+                <li><a class="dropdown-item" href="/delete/{{post.id}}">Delete</a></li>
+              </ul>
+            </div>
+            {% endif %}
+          </div>
+          <div class="card-body">
+            <div class="card-text">
+              {{post.content}}
+            </div>
+            <div class="card-footer text-muted">
+              {{post.date_created}}
+            </div>
+          </div>
+      </div>
+    </div>
+    <br>
+    <div align="center">
+      <a href="/home"
+        ><button type="button" class="btn btn-dark btn-lg">Back</button></a
+      >
+    </div>
+  {% endfor %}
+  {% endblock %}

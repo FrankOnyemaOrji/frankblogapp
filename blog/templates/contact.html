@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+<h1 >Contact Me</h1>
+<form class="col g-3" method="POST">
+  <div class="col-md-6">
+    <label class="visually-hidden" for="username">Username</label>
+    <div class="input-group">
+      <div class="input-group-text">@</div>
+      <input type="text" class="form-control" id="username" placeholder="Username" name="username" required>
+    </div>
+    <div class="col-md-6">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <textarea name="content" id="content" class="form-control mt-2" cols="50" rows="10">  
+    </textarea>
+    <div class="col-md-12 mt-2" align="center">
+      <button type="submit" class="btn btn-dark">Submit</button>
+     </div>
+    </div>
+</form>
+</div>
+{% endblock %}

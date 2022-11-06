@@ -1,0 +1,135 @@
+ /*This is the styling of the page*/
+  body{
+    
+    padding: 0;
+    margin: 0;
+    font-family: 'josefin sans', sans-serif;
+    box-sizing: border-box;
+ }
+
+ /* this is style for the navbar*/
+ .narbar nav {
+    background-color: #0e153a;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 12%;
+    padding-right: 12%; 
+    flex-direction: row; 
+    height: 100vh;
+    width: 100%;
+ }
+ /* the line divided*/
+ hr {
+    border: 0;
+    height: 2px;
+    background-color: #FEA920;
+}
+ul {
+    display: flex;
+    
+}
+li {
+    list-style: none;
+    justify-content: space-between;
+    display: inline;
+    margin: 0 20px;
+}
+/* the list navbar decoration for underorderred list and attribute*/
+ a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    font-size: bold;
+    text-transform: capitalize;
+ }
+ /* adding hover to the navbar attributes*/
+ ul li a:hover{
+    color: #FEA920;
+    transition: .4s;
+ }
+ .logo{
+    color: #FEA920;
+    font-size: 45px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+span{
+    color: white;
+}
+.hello {
+    color: white;
+}
+.btn{
+    background-color: #FEA920;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding:10px 25px;
+    border-radius: 30px;
+    /* transition: transform .4s; */
+}
+/* the button my blog hover*/
+.btn:hover{
+    transform: scale(1.2);
+}
+.top-sect{
+    padding: 0% auto;
+    text-align: center;
+    color: white;
+}
+h1 {
+    color:#FEA920;
+    margin: 20px 0px 20px;
+    font-size: 75px;
+}
+h3 {
+    color: #FEA920;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.login form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    max-width: 100%;
+    align-content: center;
+}
+form input:first-child{
+    display: inline-block;
+    width: 100%;
+    padding: 14px 130px 14px 15px;
+    border: 2px solid #FEA920;
+    outline: none;
+    border-radius: 40px;
+}
+form input:last-child{
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    background-color: #FEA920;
+    color: white;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+    top: 6px;
+    right: 6px;
+    border-radius: 15px;
+}
+.btnlogin {
+    display: flex;
+    background-color: #FEA920;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding:10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+}

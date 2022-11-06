@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block section %}
+<div class="container">
+  <div class="d-sm-auto">
+    <h1>Please <span class="text-warning"> login</span> </h1>
+    <h3>To be able  to<span class="text-warning"> view profile, posts</span> and <span class="text-warning"> write more articles</span></h3>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1 align="center">Login Here</h1>
+ <form class="col g-3" method="POST" >
+  <div class="col-md-6">
+  <div class="col-md-6">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email">
+  </div>
+  <div class="col-md-6">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" name="password">
+  </div>
+  <div class="col-md-12 mt-2" align="center">
+    <button type="submit" class="btn btn-dark">Login</button>
+   </div>
+  </div>
+ 
+</form>
+</div>
+{% endblock %}
