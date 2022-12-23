@@ -2,7 +2,7 @@
 {% block content %}
 <form action="/edit/{{post.user.id}}" method="POST">
   <h3>Edit Your Post</h3>
-  <textarea name="content" id="content" class="form-control" cols="50" rows="10">{{post.new_content}}</textarea>
+  <textarea name="content" id="content" class="form-control" cols="50" rows="10">{{post.content}}</textarea>
   <br>
   <div align="center">
     <button type="submit" class="btn btn-lg btn-dark">Edit</button>

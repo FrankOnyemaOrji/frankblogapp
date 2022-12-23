@@ -64,14 +64,15 @@ def edit_post(id):
         flash('You do not have permission to edit this post', category='error')
     else:
         if request.method == 'POST':
-            content = request.form.get('content')
-            if not content:
+            post.content = request.form.get('content')
+            if not post.content:
                 flash('Post is empty!', category='error')
             else:
-                post.content = content
+                db.session.add(post)
                 db.session.commit()
                 flash('Post edited!', category='success')
                 return redirect(url_for('views.home'))
+    post.content = post.content
     return render_template('edit.html', post=post)
 
 
