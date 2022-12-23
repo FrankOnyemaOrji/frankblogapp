@@ -1,2 +1,2 @@
-instance/
-blog/__pycache__/
+/instance
+/__pycache__
